@@ -1,10 +1,10 @@
 [English](README.md) | **中文**
 
 # MinecraftLootChestJsonMaker
-为中文Minecraft Wiki的模块[Module:LootChest](https://zh.minecraft.wiki/Module:LootChest)生成Java版战利品表数据。
+为中文Minecraft Wiki的模块[Module:LootChest](https://zh.minecraft.wiki/Module:LootChest)生成战利品表数据。
 
 ## 使用
-将`JsonMarker.py`置于战利品表根目录（`/loot_table`），然后运行。
+将`JsonMarker.py`置于战利品表根目录，然后运行。
 
 `JsonMarker.py`会生成3个文件:
 * `result.txt`：包含合并的战利品表JSON。

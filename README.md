@@ -1,10 +1,10 @@
 **English** | [中文](README-zh.md)
 
 # MinecraftLootChestJsonMaker
-Generate Java Edition loot table data for Module [Module:LootChest](https://zh.minecraft.wiki/Module:LootChest) in Chinese Minecraft Wiki.
+Generate loot table data for Module [Module:LootChest](https://zh.minecraft.wiki/Module:LootChest) in Chinese Minecraft Wiki.
 
 ## Usage
-Put `JsonMarker.py` in root directory of loot tables (`/loot_chest`) and run it.
+Put `JsonMarker.py` in root directory of loot tables and run it.
 
 `JsonMarker.py` will generate 2 files:
 * `result.txt`: include merged loot table json.
