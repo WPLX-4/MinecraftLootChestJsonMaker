@@ -45,7 +45,7 @@ DONT_MODIFIED_NAME_RULE = [
         'struname': 'items_to_drop_when_ominous'
     }
 ]
-DONT_GENERAT_DATA_RULE = [
+DONT_GENERATE_DATA_RULE = [
     {
         'directory': '/chests/trial_chambers',
         'suffix': '',
@@ -58,7 +58,7 @@ DONT_GENERAT_DATA_RULE = [
     }
 ]
 
-def firstStructure(f):
+def writeFirstStructure(f):
     global first
     if first is False :
         f.writelines(',\n')
@@ -81,7 +81,7 @@ def dontGenerateLootChestResult(struname, directory, suffix):
         'suffix': suffix,
         'struname': struname
     }
-    return preProcessStructure in DONT_GENERAT_DATA_RULE
+    return preProcessStructure in DONT_GENERATE_DATA_RULE
 
 def generateLootChestResult(directory, suffix, f, doc):
     filedir = os.getcwd()+ directory
@@ -96,7 +96,7 @@ def generateLootChestResult(directory, suffix, f, doc):
             if generateSpecialLootChestResult(struname, directory, suffix, f, doc, filepath):
                 continue
             doc.writelines(struname+'\n')
-            firstStructure(f)
+            writeFirstStructure(f)
             f.writelines('"'+struname+'": ')
             for line in open(filepath):
                 f.writelines(line)
@@ -115,7 +115,7 @@ def generateSpecialLootChestResult(struname, directory, suffix, f, doc, filepath
             for entry in pool["entries"]:
                 entry.pop("conditions", None)
         doc.writelines(ABANDONED_MINESHAFT_NOT_IN_SULFUR_CAVE + '\n' + ABANDONED_MINESHAFT_IN_SULFUR_CAVE + '\n')
-        firstStructure(f)
+        writeFirstStructure(f)
         f.write('"' + ABANDONED_MINESHAFT_NOT_IN_SULFUR_CAVE + '": ')
         json.dump(abandonedMineshaftNotInSulfurCaveData, f, ensure_ascii=False, indent=2)
         f.write(',\n')
