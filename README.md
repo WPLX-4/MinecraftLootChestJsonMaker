@@ -1,4 +1,4 @@
-[English](README.md) | [中文](README-zh.md)
+**English** | [中文](README-zh.md)
 
 # MinecraftLootChestJsonMaker
 Generate Java Edition loot table data for Module [Module:LootChest](https://zh.minecraft.wiki/Module:LootChest) in Chinese Minecraft Wiki.

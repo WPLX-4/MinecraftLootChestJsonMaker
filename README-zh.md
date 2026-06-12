@@ -1,4 +1,4 @@
-[English](README.md) | [中文](README-zh.md)
+[English](README.md) | **中文**
 
 # MinecraftLootChestJsonMaker
 为中文Minecraft Wiki的模块[Module:LootChest](https://zh.minecraft.wiki/Module:LootChest)生成Java版战利品表数据。
